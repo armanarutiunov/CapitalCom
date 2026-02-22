@@ -8,8 +8,9 @@ defmodule CapitalCom.Trading do
 
   def place_order(%Config{} = config, %PlaceOrderRequest{} = request) do
     with :ok <- validate_request(request),
-         {:ok, response} <- Client.request(config, :post, "/api/v1/positions", Map.from_struct(request)) do
-      {:ok, Map.put(response, :dealReference, "DUMMY-DEAL-REF")}
+         {:ok, response} <-
+           Client.request(config, :post, "/api/v1/positions", Map.from_struct(request)) do
+      {:ok, response}
     end
   end
 
