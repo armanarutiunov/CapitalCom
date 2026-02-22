@@ -1,7 +1,7 @@
 defmodule CapitalComTest do
   use ExUnit.Case
 
-  alias CapitalCom.{Client, Config, Error, Orders, Prices, RateLimiter, Sentiment, Trading}
+  alias CapitalCom.{Client, Config, Error, General, Orders, Prices, RateLimiter, Sentiment, Trading}
 
   test "session login is rate limited at 1 req/s per api key" do
     key_a = "k-a-#{System.unique_integer([:positive])}"
@@ -38,6 +38,8 @@ defmodule CapitalComTest do
              Prices.get(cfg, "CS.D.EURUSD.CFD.IP")
 
     assert {:ok, %{path: "/api/v1/clientsentiment"}} = Sentiment.list(cfg)
+    assert {:ok, %{path: "/api/v1/time"}} = General.list(cfg)
+    assert {:ok, %{path: "/api/v1/ping"}} = General.ping(cfg)
   end
 
   test "order request validates size" do
