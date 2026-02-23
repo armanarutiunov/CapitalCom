@@ -1,0 +1,43 @@
+defmodule CapitalCom.Generated.Endpoints do
+  @moduledoc false
+  @endpoints [
+    %{method: :delete, path: "/api/v1/positions/{dealId}"},
+    %{method: :delete, path: "/api/v1/session"},
+    %{method: :delete, path: "/api/v1/watchlists/{watchlistId}"},
+    %{method: :delete, path: "/api/v1/watchlists/{watchlistId}/{epic}"},
+    %{method: :delete, path: "/api/v1/workingorders/{dealId}"},
+    %{method: :get, path: "/api/v1/accounts"},
+    %{method: :get, path: "/api/v1/accounts/preferences"},
+    %{method: :get, path: "/api/v1/clientsentiment"},
+    %{method: :get, path: "/api/v1/clientsentiment/{marketId}"},
+    %{method: :get, path: "/api/v1/confirms/{dealReference}"},
+    %{method: :get, path: "/api/v1/history/activity"},
+    %{method: :get, path: "/api/v1/history/transactions"},
+    %{method: :get, path: "/api/v1/marketnavigation"},
+    %{method: :get, path: "/api/v1/marketnavigation/{nodeId}"},
+    %{method: :get, path: "/api/v1/markets"},
+    %{method: :get, path: "/api/v1/markets/{epic}"},
+    %{method: :get, path: "/api/v1/ping"},
+    %{method: :get, path: "/api/v1/positions"},
+    %{method: :get, path: "/api/v1/positions/{dealId}"},
+    %{method: :get, path: "/api/v1/prices/{epic}"},
+    %{method: :get, path: "/api/v1/session"},
+    %{method: :get, path: "/api/v1/session/encryptionKey"},
+    %{method: :get, path: "/api/v1/time"},
+    %{method: :get, path: "/api/v1/watchlists"},
+    %{method: :get, path: "/api/v1/watchlists/{watchlistId}"},
+    %{method: :get, path: "/api/v1/workingorders"},
+    %{method: :post, path: "/api/v1/accounts/topUp"},
+    %{method: :post, path: "/api/v1/positions"},
+    %{method: :post, path: "/api/v1/session"},
+    %{method: :post, path: "/api/v1/watchlists"},
+    %{method: :post, path: "/api/v1/workingorders"},
+    %{method: :put, path: "/api/v1/accounts/preferences"},
+    %{method: :put, path: "/api/v1/positions/{dealId}"},
+    %{method: :put, path: "/api/v1/session"},
+    %{method: :put, path: "/api/v1/watchlists/{watchlistId}"},
+    %{method: :put, path: "/api/v1/workingorders/{dealId}"},
+  ]
+
+  def all, do: @endpoints
+end
